@@ -1,38 +1,261 @@
-.App {
-  text-align: center;
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html{
+  margin-top: 70px;
+  background: #fff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.todo-app{
   display: flex;
   flex-direction: column;
+}
+
+h1 {
+  position: relative;
+  text-align: center;
+  padding: 36px;
+  margin: 5px;
+  font-weight: 600;
+  font-size: 47px;
+}
+
+h1::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 3px;
+  background-color: #b0c4de;
+  width: 24%;
+  margin: 0 auto;
+  transform: translateY(-19px);
+}
+.containerInfo{
+  display: flex;
+  justify-content: center; /* 수평 중앙 정렬 */
+  align-items: center; /* 수직 중앙 정렬 */
+}
+.date {
+  position: relative;
+  text-align: center;
+  padding: 7px;
+  margin: 9px;
+  left: 322px;
+  font-weight: 500;
+  font-size: 17px;
+  border-radius: 50%;
+  width: 300px;
+  height: 49px;
+  transform: translateY(14px);
+  background-color: #b0c4de;
+  z-index: 1;
+}
+.cir1{
+  position: relative;
+  padding: 16px;
+  margin: 12px;
+  left: 0px;
+  font-weight: 600;
+  font-size: 17px;
+  border-radius: 50%;
+  width: 300px;
+  height: 49px;
+  border: 1px solid;
+  z-index: 2;
+}
+.cir2{
+  position: relative;
+  padding: 16px;
+  margin: 12px;
+  left: -324px;
+  font-weight: 600;
+  font-size: 17px;
+  border-radius: 50%;
+  width: 300px;
+  height: 46px;
+  border: 1px solid;
+  transform: translateY(24px);
+  z-index: 0;
+}
+
+.containerList{
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 703px;
+  width: 600px;
+  border: 2px solid #b0c4de;
+  border-radius: 3rem;
+  margin: 0 auto;
+  transform: translateY(-57px);
+}
+
+.to-do{
+  position: relative;
+  padding: 7px;
+  margin: 8px;
+  left: 30px;
+  font-weight: 300;
+  font-size: 27px;
+  width: 66px;
+  height: 49px;
+  transform: translateY(17px);
+}
+
+.todo-input {
+  position: relative;
+  padding: 7px;
+  margin: 9px;
+  left: 99px;
+  font-weight: 500;
+  font-size: 17px;
+  width: 400px;
+  height: 49px;
+  transform: translateY(-47px);
+  border: none;
+  border-bottom: 2px solid #b0c4de;
+}
+.todo-inputEdit{
+  position: relative;
+  padding: 7px;
+  margin: 9px;
+  left: 108px;
+  font-weight: 500;
+  font-size: 17px;
+  width: 400px;
+  height: 49px;
+  transform: translateY(115px);
+  border: none;
+  border-bottom: 2px solid #b0c4de;
+}
+
+.todo-button{
+  position: relative;
+  padding: 7px;
+  margin: 9px;
+  left: 322px;
+  font-weight: 500;
+  font-size: 17px;
+  width: 300px;
+  height: 49px;
+  transform: translateY(14px);
+}
+
+.check-icon {
+  position: relative;
+  cursor: pointer;
+  left: 89px;
+  color: #000;
+  border: 1px solid #b0c4de;
+  background-color: #e6e6fa;
+  border-radius: 50%;
+  margin-left: 10px;
+  font-size: 20px;
+  height: 30px;
+  width: 30px;
+  padding: 4px;
+  transform: translateY(-40px);
+}
+.todo-buttonEdit{
+  position: relative;
+  cursor: pointer;
+  left: 89px;
+  color: #000;
+  border: 1px solid #b0c4de;
+  background-color: #e6e6fa;
+  border-radius: 50%;
+  margin-left: 10px;
+  font-size: 20px;
+  height: 30px;
+  width: 30px;
+  padding: 4px;
+  transform: translateY(122px);
+}
+.todo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 가운데 정렬 */
+  width: 600px; /* todo-row와 동일한 너비 */
+  padding: 10px;
+  margin: 0 auto; /* 중앙 정렬을 위한 마진 */
+}
+
+.todo-row {
+  width: 100%;
+  height: 57px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 10px;
+  transform: translateY(117px);
+}
+.list{
+  position: relative;
+  padding: 7px;
+  margin: 9px;
+  left: 24px;
+  font-weight: 500;
+  font-size: 17px;
+  width: 372px;
+  height: 49px;
+  transform: translateY(13px);
+}
+.list::after {
+  content: '';
+  position: absolute;
+  left: -71px;
+  right: 0;
+  bottom: 0;
+  height: 1.5px;
+  background-color: #000;
+  width: 138%;
+  margin: 0 auto;
+  transform: translateY(-11px);
+}
+.delete-icon{
+  position: relative;
+  padding: 8px;
+  margin: 1px;
+  left: 4px;
+  font-weight: 500;
+  font-size: 17px;
+  width: 42px;
+  height: 35px;
+  transform: translateY(11px);
+}
+.edit-icon{
+  position: relative;
+  padding: 8px;
+  margin: 1px;
+  left: -15px;
+  font-weight: 500;
+  font-size: 17px;
+  width: 44px;
+  height: 42px;
+  transform: translateY(10px);
 }
 
-.App-link {
-  color: #61dafb;
+.checkbox {
+  position: relative;
+  padding: 8px;
+  margin: 1px;
+  left: 22px;
+  font-weight: 500;
+  font-size: 17px;
+  width: 44px;
+  height: 20px;
+  transform: translateY(2px);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todo-row.complete .list {
+  text-decoration: line-through; /* 줄 그어지기 */
 }
