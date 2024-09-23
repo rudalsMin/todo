@@ -6,7 +6,7 @@
 
 html{
   margin-top: 70px;
-  background: #fff;
+  background: #fff5ee	;
 }
 
 .todo-app{
@@ -53,7 +53,7 @@ h1::after {
   height: 49px;
   transform: translateY(14px);
   background-color: #b0c4de;
-  z-index: 1;
+  z-index: 2;
 }
 .cir1{
   position: relative;
@@ -66,7 +66,7 @@ h1::after {
   width: 300px;
   height: 49px;
   border: 1px solid;
-  z-index: 2;
+  z-index: 3;
 }
 .cir2{
   position: relative;
@@ -80,7 +80,7 @@ h1::after {
   height: 46px;
   border: 1px solid;
   transform: translateY(24px);
-  z-index: 0;
+  z-index: 1;
 }
 
 .containerList{
@@ -92,6 +92,7 @@ h1::after {
   height: 703px;
   width: 600px;
   border: 2px solid #b0c4de;
+  background-color: #fff;
   border-radius: 3rem;
   margin: 0 auto;
   transform: translateY(-57px);
@@ -259,3 +260,8 @@ h1::after {
 .todo-row.complete .list {
   text-decoration: line-through; /* 줄 그어지기 */
 }
+
+.todo-form{
+  transform: translateY(3px);
+}
+
